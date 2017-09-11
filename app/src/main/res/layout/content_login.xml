@@ -12,4 +12,11 @@
     tools:context="com.example.sonu.travelguide.LoginActivity"
     tools:showIn="@layout/activity_login">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
