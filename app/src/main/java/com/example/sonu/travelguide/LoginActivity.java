@@ -1,6 +1,7 @@
 package com.example.sonu.travelguide;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -11,9 +12,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private TextView tv;
+    private ImageView iv;
 
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mMessageDatabaseReference;
@@ -54,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         tv = (TextView) findViewById(R.id.textView2);
+        iv = (ImageView) findViewById(R.id.image);
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mMessageDatabaseReference = mFirebaseDatabase.getReference().child("message");
@@ -69,8 +74,11 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             Message msg = dataSnapshot.getValue(Message.class);
-                            String s = msg.getName()+"\n"+msg.getText();
+                            String s = msg.getName();
                             tv.setText(s);
+                            Glide.with(iv.getContext())
+                                    .load(msg.getText())
+                                    .into(iv);
                         }
 
                         @Override
