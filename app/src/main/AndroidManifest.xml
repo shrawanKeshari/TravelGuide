@@ -21,7 +21,25 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PlaceListActivity"
+            android:label="@string/title_activity_place_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sonu.travelguide.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PlaceDetailActivity"
+            android:label="@string/title_activity_place_detail"
+            android:parentActivityName=".PlaceListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sonu.travelguide.PlaceListActivity" />
+        </activity>
     </application>
 
 </manifest>

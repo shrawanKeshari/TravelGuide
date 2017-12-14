@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<places>
+    <place>
+        <placeId>1</placeId>
+        <placeTitle>Akshardham</placeTitle>
+        <image>akshardham</image>
+        <location>Noida Mor, Pandav Nagar, New Delhi, Delhi 110092</location>
+    </place>
+    <place>
+        <placeId>2</placeId>
+        <placeTitle>India Gate</placeTitle>
+        <image>india_gate</image>
+        <location>Rajpath Marg, India Gate, New Delhi, Delhi 110001</location>
+    </place>
+    <place>
+        <placeId>3</placeId>
+        <placeTitle>Lotus Temple</placeTitle>
+        <image>lotus_temple</image>
+        <location>Lotus Temple Rd, Bahapur, Shambhu Dayal Bagh, Kalkaji, New Delhi, Delhi 110019</location>
+    </place>
+    <place>
+        <placeId>4</placeId>
+        <placeTitle>Jantar Mantar</placeTitle>
+        <image>jantar_mantar</image>
+        <location>Sansad Marg, Connaught Place, New Delhi, Delhi 110001</location>
+    </place>
+    <place>
+        <placeId>5</placeId>
+        <placeTitle>Qutub Minar</placeTitle>
+        <image>qutub_minar</image>
+        <location>Mehrauli, New Delhi, Delhi 110030</location>
+    </place>
+    <place>
+        <placeId>6</placeId>
+        <placeTitle>Raj Ghat</placeTitle>
+        <image>raj_ghat</image>
+        <location>Behind Red Fort, New Delhi, Delhi 110006</location>
+    </place>
+</places>

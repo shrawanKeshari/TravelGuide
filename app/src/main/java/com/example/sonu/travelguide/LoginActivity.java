@@ -73,12 +73,16 @@ public class LoginActivity extends AppCompatActivity {
                     mMessageDatabaseReference.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            Message msg = dataSnapshot.getValue(Message.class);
-                            String s = msg.getName();
-                            tv.setText(s);
-                            Glide.with(iv.getContext())
-                                    .load(msg.getText())
-                                    .into(iv);
+                            Log.d("Msg",dataSnapshot.toString());
+                            String[] a = dataSnapshot.getValue().toString().split("=");
+                            for(int i = 0; i < a.length; i++){
+                                Log.d("Msg",a[i]);
+                            }
+//                            String s = msg.getName();
+//                            tv.setText(s);
+//                            Glide.with(iv.getContext())
+//                                    .load(msg.getText())
+//                                    .into(iv);
                         }
 
                         @Override
